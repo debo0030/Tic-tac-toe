@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Josefin+Sans');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #17304e;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #313443;
+  background-image: url(../img/green-1846861_1920.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #eee;
+  font-size: 48px;
+  font-family: 'Kaushan Script', serif;
+  margin: 32px 0 8px 0;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #eee;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+}
+
+p {
+  color: #eee;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  font-size: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 8px;
+}
+
+.game{
+  width: 315px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  clear: both;
+}
+
+.board {
+  width: 315px;
+  display: inline-block;
+  margin: 0 auto;
+  float: left;
+}
+
+.grid {
+  display: inline;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  background-color: #eee;
+  border: 1px solid #7f7f7f;
+  border-radius: 3px;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 110px;
+}
+
+.grid:hover,
+.grid:active,
+.grid:visited {
+  background-color: #c8f3f0;
+}
+
+.controls {
+  display: block;
+}
+
+.button {
+  display: inline;
+  font-size: 19px;
+  padding: 15px;
+  margin: 10px auto;
+  background-color: #17304e;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+  color: #eee;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+
+  transform-style: flat;
+  transition: all 200ms ease-out;
+}
+
+  /* Lift effect – lifts sides on hover */
+  .button::before {
+      left: 10px;
+      transform: rotate(-3deg);
+  	}
+    .button::after {
+      right: 10px;
+      transform: rotate(3deg);
+  	}
+
+  .button:hover::before {
+      left: 8px;
+      transform: rotate(-3deg);
+  	}
+    .button:hover::after {
+      right: 8px;
+      transform: rotate(3deg);
+  	}
+
+    .button:hover {
+      background-color: #224672;
+      border-color: #313443;
+      box-shadow: 0 15px 12px rgba(31, 31, 31, 0.7);
+    }
+
+.results {
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+  width: 100%;
+}
+
+.results-bar {
+  text-align: left;
+  background: #f4f5f7;
+}
+
+.item {
+  float: left;
+  position: relative;
+  margin: 10px 0 4px 0;
+  padding: 0 5px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 0 1px white;
+  word-break: break-all;
+  /*word-wrap: break-word;*/
+  width: 33.3%;
+
+}
+
+.item:nth-child(2) {
+  border-left: 3px dotted #bdbbbb;
+  border-right: 3px dotted #bdbbbb;
+
+}
+
+.counter {
+  position: absolute;
+  top: -1px;
+  right: 1px;
+  height: 16px;
+  line-height: 2px;
+  margin-top: -20px;
+  padding: 13px 8px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  background: #eeba49;
+  /*#d5394e;*/
+  border: 1px solid #f1c25e;
+  border-radius: 50%;
+}
+
+.next {
+  background-color: #17304e;
+  border-radius: 3px;
+  padding: 24px;
+  z-index: 11;
+  width: 400px;
+  height: auto;
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  margin-left: -200px;
+  animation-name: slide;
+  animation-duration: 1s;
+}
+
+@keyframes slide {
+  0% {top:-30px;}
+  100% {top: 35%;}
+}
+
+.win {
+  background-color: #eeba49;
+  color: #eee;
+  border: 5px solid #f1c25e;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+}
+
+#turn {
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+#youWin {
+  margin: 0 2px 6px 2px;
+  padding: 8px;
+  color: #292b3a;
+  background-color: #eee;
+  border: 5px solid #d4557e;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
