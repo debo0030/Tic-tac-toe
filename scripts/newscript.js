@@ -25,7 +25,12 @@ var module = (function() {
 
       // asks users to input 2 different names, stores names in player objects
       function getUserInfo() {
-        // $('.game').append('<div class="group"><input class="enterName" type="text" placeholder="Player X" required><span class="highlight"></span><span class="bar"></span><label class="pointer">Enter Name</label></div><div class="group"><input class="enterName"type="text" placeholder="Player O" required><span class="highlight"></span><span class="bar"></span><label class="pointer">Enter Name</label></div><input class="submitNames button" type="submit" name="submitNames"value="Start Game">')
+        // $('.game').append('<div class="form"><div class="group"><input class="enterName name1" type="text" placeholder="Player X" required><span class="highlight"></span><span class="bar"></span><label class="pointer">Enter Name</label></div><div class="group"><input class="enterName name2"type="text" placeholder="Player O" required><span class="highlight"></span><span class="bar"></span><label class="pointer">Enter Name</label></div><input class="submitNames button" type="submit" name="submitNames"value="Start Game"></div>')
+        //
+        // playerX.name === $('.name1').val();
+        // playerO.name ===$('.name2').val();
+        // console.log(playerO.name);
+        // console.log(playerX.name);
 
         while (playerX.name === "") {
           playerX.name = prompt("Enter Player X's Name: ");
@@ -129,8 +134,8 @@ var module = (function() {
           currentPlayer.score += 1;
           // alert(currentPlayer.name + ' wins!');
           $('#turn').html("<p id='youWin'>" + currentPlayer.name + " wins!</p>");
+          $('#resetGame').after(resultsButton); // adds button
           displayResults();
-          $('#resetGame').before(resultsButton); // adds button
           nextRound();
           win = true;
       }
@@ -177,7 +182,7 @@ var module = (function() {
                 tieScore += 1;
                 displayResults();
                 alert('Tie');
-                $('.board').append(resultsButton);
+                $('#resetGame').after(resultsButton); // adds button
                 nextRound();
             }
           }
@@ -198,10 +203,10 @@ var module = (function() {
           $('.game').append('<div class="next"><h2>Click Here to Play Next Round</h2></div>');
           //reset gameboard
           $('.next').on('click', function(){
-            $('.grid').empty();
-            $('.next').remove();
-            $('.grid').removeClass('win');
-            win = false;
+              $('.grid').empty();
+              $('.next').remove();
+              $('.grid').removeClass('win');
+              win = false;
           })
       }
 

@@ -1,15 +1,11 @@
 /***********************
 Colours:
-Dark Navy: #292b3a
-Light Grey: #eee
-Med Grey: #7f7f7f
-Pale Grey: #d8dae4
-Blue/grey: #4d5b80
-dark blue/grey: #313443
-Almost White: #f4f5f7
-Light Grey 2: #bdbbbb
-Bright Pink: #d5394e
-Light Pink: #d4557e
+Charcole: #1f1e1e
+Dark Grey: #424549
+Med Grey: #676a73
+yellow: #ebc461
+yellow-orange: #d99e2c
+Almost White: #eee
 ************************/
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Josefin+Sans');
 
@@ -18,14 +14,16 @@ Light Pink: #d4557e
 }
 
 body {
-  color: #292b3a;
+  color: #1f1e1e;
   font-size: 20px;
   font-family: 'Josefin Sans', sans-serif;
   background:
-  background-color: #292b3a;
-  background-image: url(../img/abstract-1867838_1920.jpg);
-  background-size: auto;
-  background-repeat: no-repeat;
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
   margin: 0;
   padding: 0;
 }
@@ -39,7 +37,7 @@ h1 {
 }
 
 h2 {
-  color: #eee;
+  color: #1f1e1e;
   font-family: 'Josefin Sans', sans-serif;
   margin: 0;
 }
@@ -97,8 +95,8 @@ p {
   font-size: 19px;
   padding: 15px;
   margin: 10px auto;
-  background-color: #292b3a;
-  border: 1px solid #ccc;
+  background-color: #424549;
+  border: 1px solid #676a73;
   border-radius: 3px;
 
   color: #eee;
@@ -130,10 +128,18 @@ p {
   	}
 
     .button:hover {
-      background-color: #4d5b80;
+      background-color: #676a73;
       border-color: #313443;
       box-shadow: 0 15px 12px rgba(31, 31, 31, 0.7);
     }
+
+#startGame {
+  background-color: #ebc461;
+  color: #1f1e1e;
+}
+#startGame:hover {
+  background-color: #d99e2c;
+}
 
 .results {
   margin: 10px auto;
@@ -179,25 +185,26 @@ p {
   margin-top: -20px;
   padding: 13px 8px;
   font-weight: bold;
-  color: white;
+  color: #1f1e1e;
   text-align: center;
   text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-  background: #d5394e;
-  border: 1px solid #d4557e;
+  background: #ebc461;
+  border: 1px solid #d99e2c;
   border-radius: 50%;
 }
 
 .next {
-  background-color: #d5394e;
-  border: 5px solid #d4557e;
+  background-color: #ebc461;
+  border: 5px solid #d99e2c;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  padding: 24px;
+  padding: 20px 4px 14px 4px;
   z-index: 11;
-  width: 400px;
+  width: 375px;
   height: auto;
   position: fixed;
   top: 35%;
-  left: 50%;
+  left: 50.5%;
   margin-left: -200px;
   animation-name: slide;
   animation-duration: 1s;
@@ -209,9 +216,9 @@ p {
 }
 
 .win {
-  background-color: #d5394e;
+  background-color: #ebc461;
   color: #eee;
-  border: 5px solid #d4557e;
+  border: 5px solid #d99e2c;
   text-shadow: 0 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -225,7 +232,7 @@ p {
   padding: 8px;
   color: #292b3a;
   background-color: #eee;
-  border: 5px solid #d4557e;
+  border: 8px solid #ecbd46;
   text-shadow: 0 1px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
