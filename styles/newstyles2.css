@@ -221,13 +221,13 @@ p {
 }
 
 #youWin {
-  margin: 0 2px 6px 2px;
-  padding: 8px;
   color: #292b3a;
   background-color: #eee;
   border: 5px solid #d4557e;
   text-shadow: 0 1px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+  margin: 0 2px 6px 2px;
+  padding: 8px;
 }
 
 .group 			  {

@@ -206,6 +206,7 @@ var module = (function() {
               $('.grid').empty();
               $('.next').remove();
               $('.grid').removeClass('win');
+              $('#turn').html("<p>" + currentPlayer.name + "'s Turn</p>"); // displays the next player's name
               win = false;
           })
       }
