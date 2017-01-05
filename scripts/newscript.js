@@ -98,7 +98,6 @@ var module = (function() {
           }
           else {
             $(this).append(currentPlayer.mark);
-            switchUser();
             checkGameState($(this));
           }
       }
@@ -181,9 +180,13 @@ var module = (function() {
             else if (checkTie() == true) {
                 tieScore += 1;
                 displayResults();
-                alert('Tie');
+                // alert('Tie');
+                $('#turn').html("<p id='youWin'> It's a Tie </p>");
                 $('#resetGame').after(resultsButton); // adds button
                 nextRound();
+            }
+            else {
+              switchUser();
             }
           }
       }
@@ -203,6 +206,7 @@ var module = (function() {
           $('.game').append('<div class="next"><h2>Click Here to Play Next Round</h2></div>');
           //reset gameboard
           $('.next').on('click', function(){
+              switchUser();
               $('.grid').empty();
               $('.next').remove();
               $('.grid').removeClass('win');
