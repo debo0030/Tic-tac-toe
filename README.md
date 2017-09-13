@@ -1,6 +1,6 @@
 # tictactoe
 
-This two-player tic-tac-toe game that was created as a school project. 
+This two-player tic-tac-toe game that was created as a school project using JQuery, HTML, & CSS. 
 
 Play the game here https://debo0030.github.io/tictactoe/
 
