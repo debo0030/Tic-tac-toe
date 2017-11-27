@@ -2,7 +2,7 @@
 
 This two-player tic-tac-toe game that was created as a school project using JQuery, HTML, & CSS. 
 
-Play the game here https://debo0030.github.io/tictactoe/
+Play the game here https://debo0030.github.io/Tic-tac-toe/
 
 I had fun working on the design and ended up with 3 CSS files because I couldn't decide which I prefered.
 ![Alt text](https://github.com/debo0030/tictactoe/blob/gh-pages/img/ScreenShot1.png "CSS 1")
